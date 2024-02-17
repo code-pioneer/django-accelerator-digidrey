@@ -16,7 +16,7 @@ contactus_thanks_template  = 'contactus_thanks.html'
 profile_template           = 'profile.html'
 
 def homepage(request):
-    return render(request, home_template, menu.get_navbar('Homepage'))
+    return render(request, home_template, menu.get_navbar('Home'))
 
 def aboutus(request):
     return render(request, aboutus_template, menu.get_navbar('About Us'))

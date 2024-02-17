@@ -4,7 +4,7 @@ seo_keywords = "django accelerator, django, python, social login"
 
 menuitems = [ 
                 {   "uri":"/",
-                    "menu":"Homepage",
+                    "menu":"Home",
                     "header":"Django Accelerator",
                     "subheader":"Get started with Django in 10 min",
                     "desc":"Short description of Homepage",
