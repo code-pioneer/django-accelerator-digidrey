@@ -1,0 +1,110 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block head_content %}
+<style>
+    .nav-item.active {
+        background-color: rgb(246, 249, 251) !important;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+</style>
+{% endblock %}
+{% block page_content %}
+<ul class="nav mx-3">
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'breadcrumb' %}">Breadcrumb</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'button' %}">Button</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'card' %}">Card</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'form' %}">Form</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'icon' %}">Icon</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'image' %}">Image</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
+  <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' 'typography' %}">Typography</a></li>
+</ul>
+<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
+
+        <br/>
+        <!-- page body -->
+        <div class="row px-4 pt-2">
+            <div class="col">
+
+
+              <section id="typography-page">
+
+                <div class="card mt-n4">
+                  <div class="card-header h4">Gradient text</div>
+                  <div class="card-body">
+                    <h1 class="text-standout-rainbow">Gradient Text : class="text-standout-rainbow"</h1>
+                    <h1 class="text-primary-rainbow">Gradient Text : class="text-primary-rainbow"</h1>
+                    <h1 class="text-secondary-rainbow">Gradient Text : class="text-secondary-rainbow"</h1>
+                    <h1 class="text-success-rainbow">Gradient Text : class="text-success-rainbow"</h1>
+                    <h1 class="text-info-rainbow">Gradient Text : class="text-info-rainbow"</h1>
+                    <h1 class="text-warning-rainbow">Gradient Text : class="text-warning-rainbow"</h1>
+                    <h1 class="text-danger-rainbow">Gradient Text : class="ext-danger-rainbow"</h1>
+                  </div>
+                </div>
+                                
+                <div class="card mt-n4">
+                  <div class="card-header h4">Headings</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h1 class="display-1">h1.display-1</h1>
+                        <h1 class="display-2">h1.display-2</h1>
+                        <h1 class="display-3">h1.display-3</h1>
+                        <h1 class="display-4">h1.display-4</h1>
+                        <h1 class="display-5">h1.display-5</h1>
+                        <h1 class="display-6">h1.display-6</h1>
+                      </div>
+                      <div class="col-6">
+                        <h1>H1 Tag - Hello, world!</h1>
+                        <h2>H2 Tag - Hello, world!</h2>
+                        <h3>H3 Tag - Hello, world!</h3>
+                        <h4>H4 Tag - Hello, world!</h4>
+                        <h5>H5 Tag - Hello, world!</h5>
+                        <h6>H6 Tag - Hello, world!</h6>
+                        <p>P Tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="text-muted">P muted-text - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#">A Link - Hello world!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mt-n4">
+                  <div class="card-header h4">Inline text</div>
+                  <div class="card-body">
+                        <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                        <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                        <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                        <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                        <p><u>This line of text will render as underlined.</u></p>
+                        <p><small>This line of text is meant to be treated as fine print.</small></p>
+                        <p><strong>This line rendered as bold text.</strong></p>
+                        <p><em>This line rendered as italicized text.</em></p>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt; <br/>
+&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;<br/>
+&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;<br/>
+&lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;<br/>
+&lt;p&gt;&lt;u&gt;This line of text will render as underlined.&lt;/u&gt;&lt;/p&gt;<br/>
+&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;<br/>
+&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;<br/>
+&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
+                    </code>
+                  </div>
+                </div>
+
+              </section>
+
+          </div>
+        </div>
+{% endblock %}
+
+{% block scripts %} 
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+
+{% block page_content %}
+<div class="row m-0">
+  <div class="col-12">
+
+        <div class="card">
+          <img src="{% static './assets/img/cover-1.jpg' %}" class="card-img-top" alt="..." >
+          <div class="card-body text-center card-profile-lift">
+              <a href="#" class="avatar avatar-xl card-avatar card-avatar-top">
+                <img src="{% static './assets/img/logo-blue.png' %}" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+              </a>    
+              <div class="m-4 text-muted" style="text-align: left !important;">   
+                <h3 class="text-center pb-4">👋 Hello 👋 </h3>
+                <p class="text-justify">I am an aspiring physician 🩺 and a recent graduate 👨‍🎓 with a B.S. in Public Health. Beyond my academic pursuits, I find solace in coding, particularly in Python. Engaging in coding serves as a mental respite for me, offering a valuable diversion for my mind. Amidst my intensive MCAT preparation, I dedicated moments of my prep breaks to develop a unique application. </p>
+                <p class="text-justify">Django Accelerator is an simple web app, built by using <code><a href="https://www.djangoproject.com/" target="_blank">Python Django</a></code> framework and pre-configured to use Google oAuth for social login. I invite you to explore it and share your feedback.</p>
+              </div> 
+          </div>
+        </div>
+
+  </div>
+</div> 
+{% endblock %}

@@ -1,0 +1,153 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block head_content %}
+<style>
+    .nav-item.active {
+        background-color: rgb(246, 249, 251) !important;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<ul class="nav mx-3">
+  <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' %}">Home</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'breadcrumb' %}">Breadcrumb</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'button' %}">Button</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'card' %}">Card</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'form' %}">Form</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'icon' %}">Icon</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'image' %}">Image</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
+</ul>
+<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
+
+        <br/>
+        <!-- page body -->
+        <div class="row mx-3">
+          <div class="col-md-12 col-lg-8">
+            <div class="card mb-4">
+              <div class="card-header h4">
+                  Illustrations
+              </div>
+              <div class="card-body">
+                  <div class="text-center">
+                      <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 20rem;" src="{% static './assets/img/aboutme.svg' %}" alt="...">
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, nam commodi quaerat unde ipsa praesentium, odit at dolore dicta, nulla veniam necessitatibus architecto? Qui eius maxime dignissimos. Sint, nisi blanditiis?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ea libero error deserunt facere officiis nam illo, aspernatur, optio nulla laborum voluptatem cupiditate incidunt dolorem saepe quod earum omnis dignissimos.</p>
+                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
+                      unDraw →</a>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-header h4">Nest Theme Project</div>
+              <div class="card-body">
+                  <h4 class="small font-weight-bold">Project Completion <span class="float-right">20%</span></h4>
+                  <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <h4 class="small font-weight-bold">Advance Components <span class="float-right">40%</span></h4>
+                  <div class="progress mb-4">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <h4 class="small font-weight-bold">Basic Components <span class="float-right">60%</span></h4>
+                  <div class="progress mb-4">
+                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <h4 class="small font-weight-bold">Portal Setup <span class="float-right">80%</span></h4>
+                  <div class="progress mb-4">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <h4 class="small font-weight-bold">Version Control <span class="float-right">Complete!</span></h4>
+                  <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="card">
+              <div class="card-header h4">Colors</div>
+              <div class="card-body px-4">
+                <div class="row">
+                  <div class="col-12 mb-1">
+                      <div class="card bg-primary text-white shadow-sm">
+                          <div class="card-body">
+                              Primary
+                              <div class="text-white-50 small text-uppercase">#2C7BE6</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 mb-1">
+                      <div class="card bg-success text-white shadow-sm">
+                          <div class="card-body">
+                              Success
+                              <div class="text-white-50 small text-uppercase">#00d97e</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 mb-1">
+                      <div class="card bg-info text-white shadow-sm">
+                          <div class="card-body">
+                              Info
+                              <div class="text-white-50 small text-uppercase">#39afd1</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 mb-1">
+                      <div class="card bg-warning text-white shadow-sm">
+                          <div class="card-body">
+                              Warning
+                              <div class="text-white-50 small text-uppercase">#fac43c</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 mb-1">
+                      <div class="card bg-danger text-white shadow-sm">
+                          <div class="card-body">
+                              Danger
+                              <div class="text-white-50 small text-uppercase">#e63656</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 mb-1">
+                      <div class="card bg-secondary shadow-sm">
+                          <div class="card-body">
+                              Secondary
+                              <div class="text-black-50 small text-uppercase">#737f90</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 mb-1">
+                      <div class="card bg-light text-black shadow-sm">
+                          <div class="card-body">
+                              Light
+                              <div class="text-black-50 small text-uppercase">#EDF2F9</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 mb-1">
+                      <div class="card bg-dark text-white shadow-sm">
+                          <div class="card-body">
+                              Dark
+                              <div class="text-white-50 small text-uppercase">#283E59</div>
+                          </div>
+                      </div>
+                  </div>
+                </div>                
+              </div>
+            </div>
+
+          </div>          
+        </div>
+{% endblock %}
+
+
+{% block scripts %} 
+
+{% endblock %}

@@ -1,0 +1,184 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block head_content %}
+<style>
+    .nav-item.active {
+        background-color: rgb(246, 249, 251) !important;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+</style>
+{% endblock %}
+{% block page_content %}
+<ul class="nav mx-3">
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'breadcrumb' %}">Breadcrumb</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'button' %}">Button</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'card' %}">Card</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'form' %}">Form</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'icon' %}">Icon</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'image' %}">Image</a></li>
+  <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' 'table' %}">Table</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
+</ul>
+<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
+
+        <br/>
+        <!-- page body -->
+        <div class="row px-4 pt-2">
+            <div class="col">
+
+
+              <section id="table-page">
+                  <div class="card mt-n4">
+                    <div class="card-header h4">Table</div>
+                    <div class="table-responsive">
+                      <table id="sortTable" class="table table-nowrap table-hover card-table">
+                        <thead>
+                          <tr>
+                            <th data-sort="true">Type</th>
+                            <th class="text-center">Call</th>
+                            <th class="text-center">Email</th>
+                            <th class="text-center">SMS</th>
+                          </tr>
+                        </thead>
+                        <tbody class="fs-base">
+                          <tr>
+                            <td>
+                              Direct messages ABCEDFGHIJKLMNIOQRSTUVWXYZ0123456789
+                            </td>
+                            <td class="text-center"></td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="emailCheckboxOne" checked="">
+                                <label class="form-check-label" for="emailCheckboxOne"></label>
+                              </div>
+      
+                            </td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="smsCheckboxOne" checked="">
+                                <label class="form-check-label" for="smsCheckboxOne"></label>
+                              </div>
+      
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Reminders
+                            </td>
+                            <td class="text-center"></td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="emailCheckboxTwo" checked="">
+                                <label class="form-check-label" for="emailCheckboxTwo"></label>
+                              </div>
+      
+                            </td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="smsCheckboxTwo" checked="">
+                                <label class="form-check-label" for="smsCheckboxTwo"></label>
+                              </div>
+      
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              API Limits
+                            </td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="callCheckboxThree">
+                                <label class="form-check-label" for="callCheckboxThree"></label>
+                              </div>
+      
+                            </td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="emailCheckboxThree" checked="">
+                                <label class="form-check-label" for="emailCheckboxThree"></label>
+                              </div>
+      
+                            </td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="smsCheckboxThree" checked="">
+                                <label class="form-check-label" for="smsCheckboxThree"></label>
+                              </div>
+      
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Policy &amp; Community
+                            </td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="callCheckboxFour">
+                                <label class="form-check-label" for="callCheckboxFour"></label>
+                              </div>
+      
+                            </td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="emailCheckboxFour" checked="">
+                                <label class="form-check-label" for="emailCheckboxFour"></label>
+                              </div>
+      
+                            </td>
+                            <td class="text-center">
+      
+                              <!-- Checkbox -->
+                              <div class="form-check d-inline-block me-n3">
+                                <input class="form-check-input" type="checkbox" id="smsCheckboxFour" checked="">
+                                <label class="form-check-label" for="smsCheckboxFour"></label>
+                              </div>
+      
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="card-footer text-bg-dark">
+                      <code>
+                      div.table-responsive <br/>
+                      -- table.table.table-nowrap.table-hover.card-table  <br/>
+                      -- -- thead  <br/>
+                      -- -- -- tr  <br/>
+                      -- -- -- -- th (for sort icons, use attribute {data-sort="true"})   <br/>
+                      -- -- tbody.fs-base  <br/>
+                      -- -- -- tr  <br/>
+                      -- -- -- -- td <br/>
+                      </code>
+                    </div>
+                  </div>
+                </section>
+
+          </div>
+        </div>
+{% endblock %}
+
+{% block scripts %} 
+
+{% endblock %}

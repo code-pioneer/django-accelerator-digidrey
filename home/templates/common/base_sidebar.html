@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  {% load socialaccount %}
+  {% load account %}
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="{{ seo_description}}" />
+    <meta name="keywords" content="{{ seo_keywords}}" />
+    <link rel="shortcut icon" type="image/png" href="{% static './assets/img/favicon.png' %}"/>
+    <link rel="stylesheet" href="{% static './assets/fonts/feather/feather.css' %}" />
+    <link rel="stylesheet" href="{% static './assets/css/taralnest.min.css' %}">
+    <title>{{ header }}</title>
+    {% block head_content %}
+    {% endblock %}
+  </head>
+  <body>
+    <div class="wrapper">
+  
+      <!-- Sidebar -->
+      <div class="offcanvas-md offcanvas-start" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+        <nav id="sidebar">
+          <div class="sidebar-header align-top">
+            <img src="{% static './assets/img/logo-white.png' %}" class="text-center mx-auto" height="50" alt="..." >
+          </div>          
+          <ul class="list-unstyled components">
+            {% for item in menuitems %}
+            {% if item.primary %}
+              {% if menu == item.menu %}<li class="active">
+              {% else %} <li>
+              {% endif %}
+              <a href="{{ item.uri }}"><i class="bi {{item.icon}} h3"></i>{{item.menu}}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+          <p class="my-0 py-0 px-4 small text-secondary">General</p>
+          <ul class="list-unstyled components">
+            {% for item in menuitems %}
+            {% if not item.primary %}
+              {% if menu == item.menu %}<li class="active">
+              {% else %} <li>
+              {% endif %}
+              <a href="{{ item.uri }}"><i class="bi {{item.icon}} h3"></i>{{item.menu}}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+          <div class="card text-bg-light m-4">
+            <div class="card-body text-center px-1 py-3 align-item-center">
+              <div class="h1 mb-1">👋</div>
+              <a href="#" class="text-muted m-0">
+                <span class="h5">Hi there!</span>
+                <hr class="m-2"/>
+                <span class="tiny text-muted">taralnest.com &copy; 2019</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Sidebar -->        
+
+      <!-- main-content -->
+      <div class="container-fluid px-0 text-bg-light" id="main-content" >    
+
+        <!-- page header -->
+        <div class="header px-2">
+          <div class="container-fluid">
+
+            <div class="header-body">
+              <div class="row align-items-center">
+                {% if logo != 'none' %}
+                <div class="col-auto">
+                  <div class="avatar avatar-lg avatar-4by3 d-none d-md-block">
+                    <img src="{% static '.' %}{{logo}}" alt="..." class="avatar-img rounded">
+                  </div>
+                </div>  
+                {% endif %}            
+                <div class="col ml-n3 ml-md-n2">
+                  <h6 class="header-pretitle">{{ subheader }}</h6>
+                  <h1 class="header-title">{{ header }}</h1>  
+                </div>
+
+                <div class="col-auto d-md-none"><button class="btn btn-light d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><i class="bi bi-list h1"></i></button></div>
+                <div class="col-12 col-md-auto d-none d-md-block mt-3 mt-md-0">
+                    {% block user_menu %}
+                      {% if user.is_authenticated %}
+                        <span> Sign is as <a href="{% url 'profile' %}">{{ user.username | title }}</a></span> 
+                        <span class="text-muted"> &#183; </span> 
+                        <a href="{% url 'account_logout' %}" class="btn btn-sm btn-light"><i class="bi bi-box-arrow-right h3 text-danger"></i></a>
+                      {% else %}
+                        <a href="{% url 'account_login' %}" class="btn btn-sm btn-danger">Sign In</a>
+                      {% endif %}
+                    {% endblock %}
+                </div>
+                
+              </div> 
+            </div> 
+
+          </div>
+        </div> 
+        <!-- page header -->
+
+        <!-- page body -->
+        <div class="p-2">
+          <div class="container-fluid pt-3">
+
+            {% block page_content %}
+            <div class="card">
+              <div class="card-header">
+                <div class="header-title h3 pl-4"><span class="text-primary-rainbow">Congratulations!</span> &nbsp;&nbsp; <span class="">The install worked successfully!</span></div>
+              </div>
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-12 col-md-4">
+                      <div id="main" class="p-4 m-4">
+                          <svg class="figure" viewBox="0 0 508 268" aria-hidden="true" style="max-height: 200px;">
+                            <path d="M305.2 156.6c0 4.6-.5 9-1.6 13.2-2.5-4.4-5.6-8.4-9.2-12-4.6-4.6-10-8.4-16-11.2 2.8-11.2 4.5-22.9 5-34.6 1.8 1.4 3.5 2.9 5 4.5 10.5 10.3 16.8 24.5 16.8 40.1zm-75-10c-6 2.8-11.4 6.6-16 11.2-3.5 3.6-6.6 7.6-9.1 12-1-4.3-1.6-8.7-1.6-13.2 0-15.7 6.3-29.9 16.6-40.1 1.6-1.6 3.3-3.1 5.1-4.5.6 11.8 2.2 23.4 5 34.6z" fill="#2E3B39" fill-rule="nonzero"/>
+                            <path d="M282.981 152.6c16.125-48.1 6.375-104-29.25-142.6-35.625 38.5-45.25 94.5-29.25 142.6h58.5z" stroke="#FFF" stroke-width="3.396" fill="#6DDCBD"/>
+                            <path d="M271 29.7c-4.4-10.6-9.9-20.6-16.6-29.7-6.7 9-12.2 19-16.6 29.7H271z" stroke="#FFF" stroke-width="3" fill="#2E3B39"/>
+                            <circle fill="#FFF" cx="254.3" cy="76.8" r="15.5"/>
+                            <circle stroke="#FFF" stroke-width="7" fill="#6DDCBD" cx="254.3" cy="76.8" r="12.2"/>
+                            <path class="smoke" d="M507.812 234.24c0-2.16-.632-4.32-1.58-6.24-3.318-6.72-11.85-11.52-21.804-11.52-1.106 0-2.212.12-3.318.24-.474-11.52-12.956-20.76-28.282-20.76-3.318 0-6.636.48-9.638 1.32-4.74-6.72-14.062-11.28-24.806-11.28-.79 0-1.58 0-2.37.12-.79 0-1.58-.12-2.37-.12-10.744 0-20.066 4.56-24.806 11.28a35.326 35.326 0 00-9.638-1.32c-15.642 0-28.282 9.6-28.282 21.48 0 1.32.158 2.76.474 3.96a26.09 26.09 0 00-4.424-.36c-8.058 0-15.01 3.12-19.118 7.8-3.476-1.68-7.742-2.76-12.324-2.76-12.008 0-21.804 7.08-22.752 15.96h-.158c-9.322 0-17.38 4.32-20.856 10.44-4.108-3.6-10.27-6-17.222-6h-1.264c-6.794 0-12.956 2.28-17.222 6-3.476-6.12-11.534-10.44-20.856-10.44h-.158c-.948-9-10.744-15.96-22.752-15.96-4.582 0-8.69.96-12.324 2.76-4.108-4.68-11.06-7.8-19.118-7.8-1.422 0-3.002.12-4.424.36.316-1.32.474-2.64.474-3.96 0-11.88-12.64-21.48-28.282-21.48-3.318 0-6.636.48-9.638 1.32-4.74-6.72-14.062-11.28-24.806-11.28-.79 0-1.58 0-2.37.12-.79 0-1.58-.12-2.37-.12-10.744 0-20.066 4.56-24.806 11.28a35.326 35.326 0 00-9.638-1.32c-15.326 0-27.808 9.24-28.282 20.76-1.106-.12-2.212-.24-3.318-.24-9.954 0-18.486 4.8-21.804 11.52-.948 1.92-1.58 4.08-1.58 6.24 0 4.8 2.528 9.12 6.636 12.36-.79 1.44-1.264 3.12-1.264 4.8 0 7.2 7.742 13.08 17.222 13.08h462.15c9.48 0 17.222-5.88 17.222-13.08 0-1.68-.474-3.36-1.264-4.8 4.582-3.24 7.11-7.56 7.11-12.36z" fill="#E6E9EE"/>
+                            <path fill="#6DDCBD" d="M239 152h30v8h-30z"/>
+                            <path class="exhaust__line" fill="#E6E9EE" d="M250 172h7v90h-7z"/>
+                            <path class="flame" d="M250.27 178.834l-5.32-8.93s-2.47-5.7 3.458-6.118h10.26s6.232.266 3.306 6.194l-5.244 8.93s-3.23 4.37-6.46 0v-.076z" fill="#AA2247"/>
+                          </svg>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-8 p-4">
+                    <h3 classs="px-4">What's Next</h3>
+                    <ol>
+                      <li class="mb-1">Visit <a href="/admin" alt="Admin">Admin Console</a> and configure Google oAuth</li>  
+                      <li class="mb-1">Personalize 'Disclaimer' page <code style="background-color: #efefef;color:#333; padding:3px;border-radius: 5px;">/home/templates/common/disclaimer.html</code></li>
+                      <li class="mb-1">Personalize 'About Us' page <code style="background-color: #efefef;color:#333; padding:3px;border-radius: 5px;">/home/templates/common/aboutus.html</code></li>
+                      <li class="mb-1">Personalize 'Contact Us' page <code style="background-color: #efefef;color:#333; padding:3px;border-radius: 5px;">/home/templates/contactus.html</code></li>
+                      <li class="mb-1">Personalize '404', '500' pages <code style="background-color: #efefef;color:#333; padding:3px;border-radius: 5px;">/home/templates/*.html</code></li>
+                      <li class="mb-1">Replace default logo with yours <code style="background-color: #efefef;color:#333; padding:3px;border-radius: 5px;">/home/static/assets/img/logo*.png</code></li>
+                      <li class="mb-1">Replace default favicon with yours <code style="background-color: #efefef;color:#333; padding:3px;border-radius: 5px;">/home/static/assets/img/favicon.png</code></li>
+                    </ol>
+                  </div>
+                </div>              
+              </div>
+            </div>
+            {% endblock %}
+            <!-- Footer -->
+            <div class="card-footer card-footer-boxed mt-5">
+              <div class="row align-items-center justify-content-between">
+                <div class="col-auto">
+                </div>
+                <div class="col text-center text-muted">
+                  <small>
+                    
+                    <span class="copyright">taralnest.com © 2019</span> | <a href="/disclaimer">Disclaimer</a>
+                    
+                  </small>
+                </div>
+                <div class="col-auto">
+                  
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- / .main-content -->
+    <script src="{% static './assets/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static './assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static './assets/js/highlight.min.js' %}"></script>
+    <script>hljs.highlightAll();</script>
+    
+    {% block scripts %}
+
+    {% endblock %}
+
+    </div>
+  </body>
+</html>

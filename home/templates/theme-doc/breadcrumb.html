@@ -1,0 +1,62 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block head_content %}
+<style>
+    .nav-item.active {
+        background-color: rgb(246, 249, 251) !important;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+</style>
+{% endblock %}
+{% block page_content %}
+<ul class="nav mx-3">
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
+  <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' 'breadcrumb' %}">Breadcrumb</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'button' %}">Button</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'card' %}">Card</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'form' %}">Form</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'icon' %}">Icon</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'image' %}">Image</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
+</ul>
+<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
+
+        <br/>
+        <!-- page body -->
+        <div class="row px-4 pt-2">
+            <div class="col">
+
+              <section id="breadcrumb-page">
+                <div class="card mt-4">
+                  <div class="card-header h4">Breadcrumb</div>
+                  <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                      </ol>
+                    </nav>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      nav (aria-label="breadcrumb") <br/>
+                      -- ol.breadcrumb  <br/>
+                      -- -- li.breadcrumb-item  <br/>
+                      -- -- -- a ('area-current' for current page)
+                    </code>
+                  </div>
+                </div>
+              </section>
+
+          </div>
+        </div>
+{% endblock %}
+
+{% block scripts %} 
+
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="{{ seo_description}}" />
+    <meta name="keywords" content="{{ seo_keywords}}" />
+    <link rel="shortcut icon" type="image/png" href="{% static './assets/img/favicon.png' %}"/>
+    <link rel="stylesheet" href="{% static './assets/css/taralnest.min.css' %}">      
+    <title>{{ header }}</title>
+
+  </head>
+  <body>
+    <!-- Body wrapper -->
+    <div class="wrapper">
+        <!-- main-content -->
+        <div class="container-fluid">
+
+          <!-- header -->
+          <div class="header px-3">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="row align-items-center">
+                        <div class="col-auto mx-auto">
+                          <div class="avatar avatar-lg d-none d-md-block"><img src="{% static './assets/img/logo.png' %}" alt="..." class="avatar-img rounded-circle"></div>
+                        </div>
+                    </div> 
+                    <div class="row align-items-center text-center">
+                      <div class="col-auto mx-auto">
+                        <div class="col ml-n3 ml-md-n2">
+                          <h6 class="header-pretitle mt-2">Nest Theme</h6>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- header-->
+      
+          <div class="container-fluid">
+            {% block page_content %}
+
+            {% endblock %}
+          </div>
+
+        </div>
+        <!-- main-content -->
+    </div>
+      <!-- Body wrapper -->
+      <script src="{% static './assets/js/jquery-3.7.1.min.js' %}"></script>
+      <script src="{% static './assets/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

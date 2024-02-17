@@ -1,0 +1,5 @@
+asgiref==3.7.2
+Django==5.0.2
+sqlparse==0.4.4
+django-allauth==0.60.0
+django-markdownx==4.0.7

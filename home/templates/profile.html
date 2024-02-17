@@ -1,0 +1,72 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+
+{% static './assets/img/cover-1.jpg' %}
+{{ account.extra_data.picture }}
+
+{% block page_content %}
+    <div class="row m-0">
+        <div class="col-12 text-center">
+
+            <div class="card">
+                <img src="{% static './assets/img/cover-1.jpg' %}" alt="..." class="card-img-top">
+                <div class="card-body text-center card-profile-lift">
+                    <div class="avatar avatar-xl card-avatar card-avatar-top">
+                        <img src="{% if profile %} {{ profile.extra_data.picture }} {% else %} {% static './assets/img/logo-blue.png' %} {% endif %}" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                    </div>
+                    <br/>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-xl-6">
+                            <div class="card card-inactive mt-4" >
+                                <div class="card-body">
+                                    {% if profile %}
+                                    <div class="row">
+                                        <div class="col-12 col-xl-6">
+                                            <div class="mb-3">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                                    <small class="text-muted">Sign-in Provider</small> {{ profile.provider }}
+                                                    </li>
+                                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                                        <small class="text-muted">Email</small> {{ profile.extra_data.email }}
+                                                    </li>
+                                                    
+                                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                                        <small class="text-muted">Lacale</small> {{ profile.extra_data.locale }}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xl-6">
+                                            <div class="mb-3">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                                        <small class="text-muted">Name</small> {{ profile.extra_data.name }}
+                                                    </li>
+                                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                                        <small class="text-muted">First Name</small> {{ profile.extra_data.given_name }}
+                                                    </li>
+                                                    <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                                        <small class="text-muted">Last Name</small> {{ profile.extra_data.family_name }}
+                                                    </li>
+                                                    
+                                                </ul>                                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    {% else %}
+                                        <p class="m-5"><i class="fe fe-info text-danger"></i> Account not linked to google!</p>
+                                    {% endif %}
+                                    
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

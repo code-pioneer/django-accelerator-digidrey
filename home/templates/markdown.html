@@ -1,0 +1,78 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+
+
+{% block page_content %}
+<style>
+  pre {
+    border: 1px solid #f3f3f3;
+    margin: 1.25rem 0.0rem;
+    padding: 0.85rem !important;
+    color: #666;
+    background-color: #fbfbfb;
+    border-radius: 7px;
+  }
+
+  .nav-item .nav-link {
+    padding: .5rem .67rem !important;
+  }
+</style>
+
+<div class="row">
+  <div class="col-12">
+
+            <div class="row align-items-center mt-n5">
+              <div class="col">
+                <ul class="nav nav-tabs nav-overflow header-tabs">
+                  <li class="nav-item">
+                    <a href="{% url 'documentation' 'step1.md' %}" class="nav-link {% if doc_name == 'step1.md' %} active {% endif %}"> Getting Started</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'documentation' 'step2.md' %}" class="nav-link {% if doc_name == 'step2.md' %} active {% endif %}"> Setup App </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'documentation' 'step3.md' %}" class="nav-link {% if doc_name == 'step3.md' %} active {% endif %}"> Setup Theme & Auth </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'documentation' 'step4.md' %}" class="nav-link {% if doc_name == 'step4.md' %} active {% endif %}"> Finishing Touch </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'documentation' 'step5.md' %}" class="nav-link {% if doc_name == 'step5.md' %} active {% endif %}"> Setup Postgresql (optional) </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'documentation' 'step6.md' %}" class="nav-link {% if doc_name == 'step6.md' %} active {% endif %}"> Prep GCP </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'documentation' 'step7.md' %}" class="nav-link {% if doc_name == 'step7.md' %} active {% endif %}"> Prep Django </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'documentation' 'step8.md' %}" class="nav-link {% if doc_name == 'step8.md' %} active {% endif %}"> Build and Deploy </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+                <div class="row align-items-center mt-31">
+                  <div class="col">
+                    <div class="card mt-4" style="border-radius: 0px;">
+                      <div class="card-body text-left">
+                        <div class="row text-left">
+                            <div class="col">
+                              {{ markdown | safe }}
+                            </div>
+                        </div>   
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block scripts %} 
+
+{% endblock %}

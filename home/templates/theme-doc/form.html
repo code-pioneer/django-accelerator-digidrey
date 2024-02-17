@@ -1,0 +1,99 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block head_content %}
+<style>
+    .nav-item.active {
+        background-color: rgb(246, 249, 251) !important;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+</style>
+{% endblock %}
+{% block page_content %}
+<ul class="nav mx-3">
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'breadcrumb' %}">Breadcrumb</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'button' %}">Button</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'card' %}">Card</a></li>
+  <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' 'form' %}">Form</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'icon' %}">Icon</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'image' %}">Image</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
+</ul>
+<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
+
+        <br/>
+        <!-- page body -->
+        <div class="row px-4 pt-2">
+            <div class="col">
+
+              <section id="forms-page">
+                <div class="card">
+                  <div class="card-header h4">Simple form</div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-3">
+                        <label for="num" class="form-label">Quantity</label>
+                        <select id="num" class="form-select" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>    
+                      <div class="mb-3">
+                        <label for="customRange1" class="form-label">Example range</label>
+                        <input type="range" class="form-range" id="customRange1">      
+                      </div>           
+                      <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      form <br/>
+                      -- div.mb-3 <br/>
+                      -- -- label.form-label (add 'for' attribute connecting to input 'id' )<br/>
+                      -- -- input.form-control (add 'id' and 'type' attributes)<br/>
+                      -- -- div.form-text (add 'id' attribuite )<br/>
+                      -- -- -- -- -- <br/>
+                      -- div.mb-3 
+                      -- -- label.form-label (add 'for' attribute connecting to select 'id' )<br/>
+                      -- -- select.form-select 
+                      -- -- -- option (add 'value' attribute, 'selected' for default)
+                      -- -- -- -- -- <br/>
+                      -- div.mb-3 
+                      -- -- label.form-label (add 'for' attribute connecting to select 'id' )<br/>
+                      -- -- input.form-range (add type="range" and 'id')<br/>
+                      -- -- -- -- -- <br/>
+                      -- div.mb-3.form-check<br/>
+                      -- -- input.form-check-input (add - type='checkbox' and 'id' attributes)<br/>
+                      -- -- label.form-check-label (add 'for' attribute connecting to input 'id' )<br/>
+                      -- -- -- -- --<br/>
+                      -- button.btn.btn-primary (add - type="submit" attribute)
+                    </code>
+                  </div>
+                </div>
+
+          </div>
+        </div>
+{% endblock %}
+
+{% block scripts %} 
+
+{% endblock %}

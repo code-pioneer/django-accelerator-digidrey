@@ -1,0 +1,95 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block head_content %}
+<style>
+    .nav-item.active {
+        background-color: rgb(246, 249, 251) !important;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+</style>
+{% endblock %}
+{% block page_content %}
+<ul class="nav mx-3">
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'breadcrumb' %}">Breadcrumb</a></li>
+  <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' 'button' %}">Button</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'card' %}">Card</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'form' %}">Form</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'icon' %}">Icon</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'image' %}">Image</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
+</ul>
+<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
+
+        <br/>
+        <!-- page body -->
+        <div class="row px-4 pt-2">
+            <div class="col">
+
+              <section id="buttons-page">
+                <div class="card">
+                  <div class="card-header h4">Buttons</div>
+                  <div class="card-body">
+                      <button type="button" class="btn btn-primary mb-2">Primary</button>
+                      <button type="button" class="btn btn-secondary mb-2">Secondary</button>
+                      <button type="button" class="btn btn-success text-white mb-2">Success</button>
+                      <button type="button" class="btn btn-danger mb-2">Danger</button>
+                      <button type="button" class="btn btn-warning mb-2">Warning</button>
+                      <button type="button" class="btn btn-info mb-2">Info</button>
+                      <button type="button" class="btn btn-light mb-2">Light</button>
+                      <button type="button" class="btn btn-dark mb-2">Dark</button>
+                      <button type="button" class="btn btn-link mb-2">Link</button>
+                      <hr class="border border-dark-subtle border-1" />
+                      <button type="button" class="btn btn-outline-primary mb-2">Primary</button>
+                      <button type="button" class="btn btn-outline-secondary mb-2">Secondary</button>
+                      <button type="button" class="btn btn-outline-success mb-2">Success</button>
+                      <button type="button" class="btn btn-outline-danger mb-2">Danger</button>
+                      <button type="button" class="btn btn-outline-warning mb-2">Warning</button>
+                      <button type="button" class="btn btn-outline-info mb-2">Info</button>
+                      <button type="button" class="btn btn-outline-light text-muted mb-2">Light</button>
+                      <button type="button" class="btn btn-outline-dark mb-2">Dark</button>     
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      <div class="row">
+                        <div class="col-12 col-lg-6">
+                          button.btn.btn-primary <br/>
+                          button.btn.btn-secondary <br/>
+                          button.btn.btn-success <br/>
+                          button.btn.btn-danger <br/>
+                          button.btn.btn-warning <br/>
+                          button.btn.btn-info <br/>
+                          button.btn.btn-light <br/>
+                          button.btn.btn-dark <br/>
+                          button.btn.btn-primary <br/>
+                          -----------------------
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          button.btn.btn-outline-primary <br/>
+                          button.btn.btn-outline-secondary <br/>
+                          button.btn.btn-outline-success <br/>
+                          button.btn.btn-outline-danger <br/>
+                          button.btn.btn-outline-warning <br/>
+                          button.btn.btn-outline-info <br/>
+                          button.btn.btn-outline-light <br/>
+                          button.btn.btn-outline-dark <br/>
+                          button.btn.btn-outline-primary <br/>
+                        </div>
+                      </div>
+                      
+                    </code>
+                  </div>
+                </div>
+              </section>
+
+          </div>
+        </div>
+{% endblock %}
+
+{% block scripts %} 
+
+{% endblock %}

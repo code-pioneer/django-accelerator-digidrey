@@ -1,0 +1,559 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block head_content %}
+<style>
+    .nav-item.active {
+        background-color: rgb(246, 249, 251) !important;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+</style>
+{% endblock %}
+{% block page_content %}
+<ul class="nav mx-3">
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'breadcrumb' %}">Breadcrumb</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'button' %}">Button</a></li>
+  <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' 'card' %}">Card</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'form' %}">Form</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'icon' %}">Icon</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'image' %}">Image</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
+</ul>
+<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
+
+        <br/>
+        <!-- page body -->
+        <div class="row px-4 pt-2">
+            <div class="col">
+
+              <section id="cards-page">
+
+
+                <div class="card">
+                  <div class="card-header h4">Gradient State Card</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-6 col-xl-3 col-12">
+                        <div class="card bg-primary-rainbow">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase  text-white mb-2">Bitcoin</h6>
+                                <span class="h2 mb-0 text-white">42,8300</span>
+                                <span class="badge bg-white text-primary mt-n1">0.13%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-up text-white"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-xl-3 col-12">
+                        <div class="card bg-success-rainbow">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase  text-white mb-2">DJI • INDEX</h6>
+                                <span class="h2 mb-0 text-white">37,592.98</span>
+                                <span class="badge bg-white mt-n1 text-success">-0.31%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-down text-white"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-xl-3 col-12">
+                        <div class="card bg-info-rainbow">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase mb-2 text-white">S&P 500</h6>
+                                <span class="h2 mb-0 text-white">4,783.83</span>
+                                <span class="badge bg-white mt-n1 text-info">+0.07%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-up-right text-white"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-xl-3 col-12">
+                        <div class="card bg-danger-rainbow">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase text-white mb-2">Nasdaq</h6>
+                                <span class="h2 mb-0 text-white">14,972.76</span>
+                                <span class="badge bg-white text-danger mt-n1">+0.01%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-up-right  text-white"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-xl-6 col-12">
+                        <div class="card bg-standout-rainbow">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase  text-white mb-2">Bitcoin</h6>
+                                <span class="h2 mb-0 text-white">42,8300</span>
+                                <span class="badge bg-white text-muted mt-n1">0.13%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-up text-white"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-xl-6 col-12">
+                        <div class="card bg-warning-rainbow">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase  text-white mb-2">Bitcoin</h6>
+                                <span class="h2 mb-0 text-white">42,8300</span>
+                                <span class="badge bg-white text-warning mt-n1">0.13%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-up text-white"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code> 
+                      div.card bg-primary-rainbow #success, info, warning, danger, standout <br/>
+                      -- div.card-body <br/>
+                      -- -- div.row.align-item-center <br/>
+                      -- -- -- div.col.my-auto <br/>
+                      -- -- -- -- h6.text-uppercase text-white mb-2<br/>
+                      -- -- -- -- span.h2 text-white mb-0 <br/>
+                      -- -- -- -- span.badge bg-white text-primary mt-n1 (optional) <br/>
+                      -- -- -- div.col-auto.my-auto <br/>
+                      -- -- -- -- span.h2 bi bi-x-lg text-white
+                    </code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Standard State Card</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-6 col-xl-3 col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase text-body-secondary mb-2">Bitcoin</h6>
+                                <span class="h2 mb-0">42,8300</span>
+                                <span class="badge bg-success-subtle mt-n1">0.13%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-up"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-xl-3 col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase text-body-secondary mb-2">DJI • INDEX</h6>
+                                <span class="h2 mb-0">37,592.98</span>
+                                <span class="badge bg-danger-subtle mt-n1">-0.31%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-down"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-xl-3 col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase text-body-secondary mb-2">S&P 500</h6>
+                                <span class="h2 mb-0">4,783.83</span>
+                                <span class="badge bg-success-subtle mt-n1">+0.07%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-up-right"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-xl-3 col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row align-item-center">
+                              <div class="col my-auto">
+                                <h6 class="text-uppercase text-body-secondary mb-2">Nasdaq</h6>
+                                <span class="h2 mb-0">14,972.76</span>
+                                <span class="badge bg-success-subtle mt-n1">+0.01%</span>
+                              </div>
+                              <div class="col-auto my-auto"><span class="h2 bi bi-arrow-up-right"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code> 
+                      div.card  <br/>
+                      -- div.card-body <br/>
+                      -- -- div.row.align-item-center <br/>
+                      -- -- -- div.col.my-auto <br/>
+                      -- -- -- -- h6.text-uppercase text-body-secondary mb-2<br/>
+                      -- -- -- -- span.h2 mb-0 <br/>
+                      -- -- -- -- span.badge bg-success-subtle mt-n1 (optional) <br/>
+                      -- -- -- div.col-auto.my-auto <br/>
+                      -- -- -- -- span.h2 bi bi-x-lg
+                    </code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Profile/Social - Circular Style</div>
+                  <div class="card-body" style="background-color: #fafafa !important">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row align-item-center">
+                          <div class="col-auto">
+                            <a href="#" class="avatar avatar-lg">
+                              <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded-circle">
+                            </a>
+                          </div>
+                          <div class="col ms-n2">
+                            <h4 class="mb-1">Taral Patel</h4>
+                            <p class="small text-body-secondary mb-1">Got a love bootstrap! If you like this theme, consider to buy me coffee!</p>
+                            <p class="tiny text-muted mb-0"> <span class="text-success">●</span> Online and cooking </p>
+                          </div>
+                          <div class="col-auto my-auto">
+                            <a href="#" class="btn btn-sm btn-primary d-none d-md-inline-block">Donate</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      div.card-body <br/>
+                      -- div.row.align-item-center  <br/>
+                      -- -- div.col-auto  <br/>
+                      -- -- -- a.avatar.avatar-lg  <br/>
+                      -- -- -- -- img.avatar-img rounded-circle  <br/>
+                      -- -- div.col.ms-n2  <br/>
+                      -- -- -- h4.mb-1  <br/>
+                      -- -- -- p.small.text-body-secondary.mb-1  <br/>
+                      -- -- -- p.tiny.text-muted.mb-0  <br/>
+                      -- -- div.col-auto.my-auto  <br/>
+                      -- -- -- a.btn.btn-sm-btn-primary.d-none.d-md-inline-block  <br/>
+                    </code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Profile/Social - Square Style with avatar group and action menu </div>
+                  <div class="card-body" style="background-color: #fafafa !important">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row align-item-center">
+                          <div class="col-auto">
+                            <a href="#" class="avatar avatar-lg">
+                              <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded">
+                            </a>
+                          </div>
+                          <div class="col ms-n2">
+                            <h4 class="mb-1">Taral Patel</h4>
+                            <p class="small text-body-secondary mb-1">Got a love bootstrap! If you like this theme, consider to buy me coffee!</p>
+                            <div class="progress progress-sm mt-3">
+                              <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="col-auto my-auto">
+                            <div class="avatar-group d-none d-md-inline-flex">
+                              <a href="#" class="avatar avatar-xs">
+                                <img src="{% static './assets/img/profile.png' %}" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                              <a href="#" class="avatar avatar-xs">
+                                <img src="{% static './assets/img/profile.png' %}" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                              <a href="#" class="avatar avatar-xs">
+                                <img src="{% static './assets/img/profile.png' %}" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                              <a href="#" class="avatar avatar-xs">
+                                <img src="{% static './assets/img/profile.png' %}" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-auto my-auto mx-auto">
+                            <div class="dropdown">
+                              <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-three-dots-vertical h3 text-primary"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#!" class="dropdown-item">Post</a>
+                                <a href="#!" class="dropdown-item">Re-post</a>
+                                <a href="#!" class="dropdown-item">React</a>
+                              </div>
+                            </div>                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      div.card-body <br/>
+                      -- div.row.align-item-center  <br/>
+                      -- -- div.col-auto  <br/>
+                      -- -- -- a.avatar.avatar-lg  <br/>
+                      -- -- -- -- img.avatar-img rounded-circle  <br/>
+                      -- -- div.col.ms-n2  <br/>
+                      -- -- -- h4.mb-1  <br/>
+                      -- -- -- p.small.text-body-secondary.mb-1  <br/>
+                      -- -- -- progress.progress-sm.mt-3 <br/>
+                      -- -- -- -- progress-bar (role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")<br/>
+                      -- -- div.col-auto.my-auto  <br/>
+                      -- -- -- -- div.avatar-group.d-none.d-md-inline-flex <br/>
+                      -- -- -- -- -- a.avatar.avvatar-xs<br/>
+                      -- -- -- -- -- -- img.avatar-img.rounded-circle <br/>
+                      -- -- -- -- -- a.avatar.avvatar-xs<br/>
+                      -- -- -- -- -- -- img.avatar-img.rounded-circle <br/>
+                      -- -- -- -- -- a.avatar.avvatar-xs<br/>
+                      -- -- -- -- -- -- img.avatar-img.rounded-circle <br/>
+                      -- -- div.col-auto.my-auto  <br/>
+                      -- -- -- dropdown <br/>
+                      -- -- -- -- a.dropdown-ellipses dropdown-toggle text-white (role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")<br/>
+                      -- -- -- -- -- i.bi bi-three-dots-vertical h3 text-primary <br/>
+                      -- -- -- -- div.dropdown-menu dropdown-menu-end<br/>
+                      -- -- -- -- -- a.dropdown-item<br/>
+                      -- -- -- -- -- a.dropdown-item<br/>
+                      -- -- -- -- -- a.dropdown-item <br/>
+                    </code>
+                  </div>
+                </div>
+
+                
+                <div class="card">
+                  <div class="card-header h4">Profile Card</div>
+                  <div class="card-body">
+                    <div class="card">
+                      <img src="{% static './assets/img/cover-1.jpg' %}" alt="..." class="card-img-top" />
+                      <div class="card-body text-center card-profile-lift" >
+                        <div class="avatar avatar-xl card-avatar card-avatar-top">
+                          <img src="{% static './assets/img/profile.png' %}" alt="" class="avatar-img rounded-circle border border-4 border-card"/>
+                        </div>  
+                        <h2 class="card-title my-2">Taral Patel</h2>
+                        <p class="small text-body-secondary mb-0">Killing time by creating bootstrap theme</p>
+                        <p><span class="badge rounded-pill text-bg-light">Student</span><span class="badge rounded-pill text-bg-light">python</span><span class="badge rounded-pill text-bg-light">bootstrap</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      div.card <br/>
+                      -- img.card-img-top   <br/>
+                      -- div.card-body.text-center.card-profile-lift <br/>
+                      -- -- div.avatar.avatar-xl.card-avatar.card-avataar-top  <br/>
+                      -- -- -- img.avatar-img.rounded-circle.border.border-4.border-card   <br/>
+                      -- -- h2.card-title.my-2  <br/>
+                      -- -- p.small.text-body-secondary.mb-0  <br/>
+                      -- -- p <br/>
+                      -- -- -- span.badge.rounded-pill.text-bg-light 
+                    </code>
+                  </div>
+                </div>
+                
+                <div class="card">
+                  <div class="card-header h4">Card Fill</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="card card-fill text-bg-primary">
+                          <div class="card-body">
+                            <h1>1.</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit quo culpa consectetur fugiat, nam libero odit fuga perspiciatis nostrum saepe sapiente numquam molestiae, optio nihil porro soluta? Eaque, quisquam doloribus?</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="card text-bg-info">
+                          <div class="card-body">
+                            <h1>2.</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore magnam fugiat mollitia ... </p>
+                          </div>
+                        </div>
+                        <div class="card text-bg-success">
+                          <div class="card-body">
+                            <h1>3.</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore magnam fugiat mollitia ... </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                    div.row <br/>
+                    - div.col-6  <br/> 
+                    - - div.card.card-fill  <br/>
+                    - div.col-6  <br/>
+                    - - div.card <br/>
+                    - - div.card <br/>
+                    </code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Card Adjust (Vertical Scroll)</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="card-adjust">
+                          <div class="card text-bg-primary">
+                            <div class="card-body">
+                              <h1>1.</h1>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ab dicta minima dolores quia dignissimos nemo consectetur nobis vitae amet! Voluptatibus, sint dolores impedit porro ipsa provident facilis magni voluptatum.</p>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos, ipsam unde eveniet sequi facilis praesentium nihil a assumenda? Animi, porro rerum. Alias ab fuga esse neque delectus, porro architecto?</p>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid soluta facere, ab nostrum vitae eius explicabo possimus consequatur atque nam accusamus maxime quas repellat perferendis dolores corporis optio beatae cumque.</p>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, nostrum nam? Veniam cumque voluptatem ut quibusdam sed dolor eius eveniet a nihil sunt! Consectetur facere dolor sint eius, dolores quo!</p>
+                              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quidem tempora quis consequuntur quod sunt natus reprehenderit eum perferendis rerum, veniam quam delectus necessitatibus ut soluta, assumenda autem maiores facilis?</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="card text-bg-info">
+                          <div class="card-body">
+                            <h1>2.</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore magnam fugiat mollitia ... </p>
+                          </div>
+                        </div>
+                        <div class="card text-bg-success">
+                          <div class="card-body">
+                            <h1>3.</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore magnam fugiat mollitia ... </p>
+                          </div>
+                        </div>
+                      </div>           
+                    </div>
+                    </div>
+                    <div class="card-footer text-bg-dark">
+                      <code>
+                      div.row <br/>
+                      - div.col-6  <br/> 
+                      - - div.card.card-adjust  <br/>
+                      - div.col-6  <br/>
+                      - - div.card <br/>
+                      - - div.card <br/>
+                      </code>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mt-4">
+                  <div class="card-header h4">Card with Nav</div>
+                  <div class="card-body">
+                    <div class="card">
+                      <div class="card-header">
+                    
+                        <h4 class="me-auto my-auto">Card title</h4>
+                        <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                          <li class="nav-item"><a href="#!" class="nav-link active">Active</a></li>
+                          <li class="nav-item"><a href="#!" class="nav-link">Link</a></li>
+                          <li class="nav-item"><a href="#!" class="nav-link">Link</a></li>
+                        </ul>                      
+                      </div>
+                      <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, non laborum? Rerum, in. Corrupti consequuntur porro distinctio, officiis ipsam quasi aliquid repudiandae accusamus reiciendis commodi itaque numquam placeat atque illum.                      
+                      </div>
+                      <div class="card-footer text-bg-dark">
+                        <code>
+                          div.card 
+                          <br/> - div.card-header 
+                          <br/> - - h4.me-auto.my-auto 
+                          <br/> - - l.nav.nav-tabs.nav-tabs-sm.card-header-tabs 
+                          <br/> - - - li.nav-item 
+                          <br/> - - - - a.nav-link 
+                        </code>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="card">
+                    <div class="card-header h4">Card flush with list</div>
+                    <div class="card-body">
+                      <div class="card">
+                        <div class="card-body">
+                          <h6 class="text-uppercase text-center text-body-secondary my-4">Pro plan</h6>
+                          <div class="row g-0 align-items-center justify-content-center">
+                            <div class="col-auto"><div class="h2 mb-0">$</div></div>
+                            <div class="col-auto"><div class="display-2 mb-0">15</div></div>
+                          </div>
+  
+                          <div class="h6 text-uppercase text-center text-body-secondary mb-5">/ month</div>
+                      
+                          <div class="mb-3">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                <small>Unlimited activity</small> <i class="bi bi-check-circle text-primary"></i>
+                              </li>
+                              <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                <small>Direct messaging</small> <i class="bi bi-check-circle text-primary"></i>
+                              </li>
+                              <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                <small>Users</small> <small>100 members</small>
+                              </li>
+                              <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                <small>Admins</small> <small>1 admin</small>
+                              </li>
+                            </ul>
+                          </div>
+  
+                          <a href="#!" class="btn w-100 btn-light">Get started with Pro Plan</a>
+                      
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer text-bg-dark">
+                      <code>
+                        div.card <br/>
+                        -- div.card-body 
+                        -- -- h6.text-uppercase.text-center.text-body-secondary.my-4  <br/>
+                        -- -- div.row.g-0.align-items-center.justify-content-center <br/> 
+                        -- -- -- div.col-auto  <br/>
+                        -- -- -- -- div.h2.mb-0  <br/>
+                        -- -- -- div.col-auto  <br/>
+                        -- -- -- -- div.display-2.mb-0  <br/>
+                        -- -- h6.text-uppercase.text-center.text-body-secondary.mb-5  <br/>
+                        -- -- div.mb-3  <br/>
+                        -- -- -- ul.list-group.list-group-flush  <br/>
+                        -- -- -- -- li.list-group-item.d-flex.align-items-center.justify-content-between.px-0  <br/>
+                        -- -- -- -- -- small  <br/>
+                        -- -- -- -- -- i.bi.bi-check-circle.text-primary <br/>
+                        -- -- -- -- li.list-group-item.d-flex.align-items-center.justify-content-between.px-0  <br/>
+                        -- -- -- -- -- small  <br/>
+                        -- -- -- -- -- small
+                      </code>
+                    </div>
+                  </div>
+                    
+                  
+                </div>
+
+              </section>
+
+          </div>
+        </div>
+{% endblock %}
+
+{% block scripts %} 
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block page_content %}
+
+<div class="row m-0">
+  <div class="col-12 text-center">
+
+        <div class="card">
+          <img src="{% static './assets/img/cover-1.jpg' %}" alt="..." class="card-img-top">
+          <div class="card-body text-center card-profile-lift">
+              <a href="#" class="avatar avatar-xl card-avatar card-avatar-top">
+              <img src="{% if profile %} {{ profile.extra_data.picture }} {% else %} {% static './assets/img/logo-blue.png' %} {% endif %}" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+              </a>
+
+              <div id="feedback_div">
+                <div class="card text-left mt-4" style="background-color: #f9fbfd;">
+                  <div class="card-body">
+                        <form method="POST" action="{% url 'contactus_save' %}">          
+                          {% csrf_token %}  
+                          <div class="invalid-feedback">{{ form.non_field_errors }}</div>
+                          <div class="form-group">
+                            <label for="feedbackid" class="mb-4">
+                              <h4>Got a question or suggestion? </h4>
+                              <span>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</span>
+                            </label><br/>
+                            {{ form.feedback }}
+                            <div class="invalid-feedback">{{ form.feedback.errors }}</div>
+                          </div>
+                          <button type="submit" class="btn btn-primary mt-4">Send Message</button>
+                        </form>
+                  </div>
+                </div>
+              </div>
+
+                    
+          </div>
+        </div>
+
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block scripts %} 
+
+{% endblock %}

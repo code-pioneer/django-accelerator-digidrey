@@ -1,0 +1,41 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block page_content %}
+
+<div class="row m-0">
+  <div class="col-12 text-center">
+
+        <div class="card">
+          <img src="{% static './assets/img/cover-1.jpg' %}" alt="..." class="card-img-top">
+          <div class="card-body text-center card-profile-lift">
+              <a href="#" class="avatar avatar-xl card-avatar card-avatar-top">
+                <img src="{% if profile %} {{ profile.extra_data.picture }} {% else %} {% static './assets/img/logo-blue.png' %} {% endif %}" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+              </a>
+
+              <div id="feedback_div">
+                <div class="card mt-4" style="background-color: #f9fbfd;">
+                  <div class="card-header text-center">
+                    <strong>Thank you form your feedback</strong>
+                  </div>
+                  <div class="card-body">
+                      <small class="text-muted"><strong>Your message: </strong>{{form.feedback}}</small> 
+                  </div>
+                  <div class="card-footer">
+                        <a href="{% url 'homepage' %}" class="btn btn-lg btn-primary my-4">
+                          Return to Homepage
+                        </a>
+                  </div>
+                </div>
+              </div>
+                    
+          </div>
+        </div>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block scripts %} 
+
+{% endblock %}

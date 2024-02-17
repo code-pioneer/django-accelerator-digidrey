@@ -1,0 +1,199 @@
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block head_content %}
+<style>
+    .nav-item.active {
+        background-color: rgb(246, 249, 251) !important;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+</style>
+{% endblock %}
+{% block page_content %}
+<ul class="nav mx-3">
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'breadcrumb' %}">Breadcrumb</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'button' %}">Button</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'card' %}">Card</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'form' %}">Form</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'icon' %}">Icon</a></li>
+  <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' 'image' %}">Image</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
+  <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
+</ul>
+<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
+
+        <br/>
+        <!-- page body -->
+        <div class="row px-4 pt-2">
+            <div class="col">
+              <p>
+                <span class="h4">For detail refer official Bootstrap documentation</span> - 
+                <a href="https://getbootstrap.com/docs/5.3/content/images/" class="btn-link h4 text-primary" target="_blank"> <i class="bi bi-bootstrap-fill"></i> </a>
+              </p>
+
+              <section id="icons-page">
+                <div class="card">
+                  <div class="card-header h4">Responsive image</div>
+                  <div class="card-body">
+                    <img src="{% static './assets/img/cover-1.jpg' %}" alt="..." class="img-fluid" />
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;img-fluid&quot; /&gt;
+                    </code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Thmbnail Image</div>
+                  <div class="card-body">
+                    <img src="{% static './assets/img/profile.png' %}" alt="..." height="50" class="rounded" />
+                    <img src="{% static './assets/img/profile.png' %}" alt="..." height="50" class="rounded-circle float-end" />                    
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;rounded&quot; /&gt; <br/>
+                      &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;rounded-circle&quot; /&gt;
+                    </code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Position image</div>
+                  <div class="card-body">
+                    <img src="{% static './assets/img/profile.png' %}" alt="..." height="50" class="rounded-circle float-start" />
+                    <img src="{% static './assets/img/profile.png' %}" alt="..." height="50" class="rounded-circle float-end" />
+                    <img src="{% static './assets/img/profile.png' %}" alt="..." height="50" class="rounded-circle mx-auto d-block" />                
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;rounded-circle float-start&quot; /&gt; <br/>
+                      &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;rounded-circle float-end&quot; /&gt; <br/>
+                      &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;rounded-circle mx-auto d-block&quot; /&gt;
+                    </code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Sizing image</div>
+                  <div class="card-body">
+                    <div class="avatar avatar-xxl">
+                      <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded-circle">
+                    </div>
+                    
+                    <div class="avatar avatar-xl">
+                      <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded-circle">
+                    </div>
+                    
+                    <div class="avatar avatar-lg">
+                      <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded-circle">
+                    </div>
+                    
+                    <div class="avatar">
+                      <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded-circle">
+                    </div>
+                    
+                    <div class="avatar avatar-sm">
+                      <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded-circle">
+                    </div>
+                    
+                    <div class="avatar avatar-xs">
+                      <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded-circle">
+                    </div>                   
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code><pre>
+&lt;div class=&quot;avatar avatar-xxl&quot;&gt;
+  &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;avatar-img rounded-circle&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;avatar avatar-xl&quot;&gt;
+  &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;avatar-img rounded-circle&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;avatar avatar-lg&quot;&gt;
+  &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;avatar-img rounded-circle&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;avatar&quot;&gt;
+  &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;avatar-img rounded-circle&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;avatar avatar-sm&quot;&gt;
+  &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;avatar-img rounded-circle&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;avatar avatar-xs&quot;&gt;
+  &lt;img src=&quot;...&quot; alt=&quot;...&quot; class=&quot;avatar-img rounded-circle&quot;&gt;
+&lt;/div&gt;                   
+                </pre></code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Initials</div>
+                  <div class="card-body">
+                    <div class="avatar avatar-lg">
+                      <span class="avatar-title rounded-circle">TP</span>
+                    </div>                  
+                    <div class="avatar">
+                      <span class="avatar-title rounded-circle">TP</span>
+                    </div>                    
+                    <div class="avatar avatar-sm">
+                      <span class="avatar-title rounded-circle">TP</span>
+                    </div>
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      <pre>
+&lt;div class=&quot;avatar avatar-lg&quot;&gt;
+  &lt;span class=&quot;avatar-title rounded-circle&quot;&gt;TP&lt;/span&gt;
+&lt;/div&gt;                  
+&lt;div class=&quot;avatar&quot;&gt;
+  &lt;span class=&quot;avatar-title rounded-circle&quot;&gt;TP&lt;/span&gt;
+&lt;/div&gt;                    
+&lt;div class=&quot;avatar avatar-sm&quot;&gt;
+  &lt;span class=&quot;avatar-title rounded-circle&quot;&gt;TP&lt;/span&gt;
+&lt;/div&gt;
+                      </pre>
+                    </code>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header h4">Status Indicator</div>
+                  <div class="card-body">
+                    <div class="avatar avatar-online">
+                      <img src="{% static './assets/img/profile.png' %}" alt="..." class="avatar-img rounded-circle">
+                    </div>
+                    
+                    <div class="avatar avatar-offline">
+                      <img src="{% static './assets/img/aboutus.png' %}" alt="..." class="avatar-img rounded-circle">
+                    </div>                                  
+                  </div>
+                  <div class="card-footer text-bg-dark">
+                    <code>
+                      <pre>
+&lt;div class=&quot;avatar avatar-online&quot;&gt;
+    &lt;img src=&quot;./www/img/avatar/author-1.png&quot; alt=&quot;...&quot; class=&quot;avatar-img rounded-circle&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;avatar avatar-offline&quot;&gt;
+    &lt;img src=&quot;./www/img/avatar/author-2.png&quot; alt=&quot;...&quot; class=&quot;avatar-img rounded-circle&quot;&gt;
+&lt;/div&gt;
+                      </pre>
+                    </code>
+                  </div>
+                </div>
+                
+              </section>
+          </div>
+        </div>
+{% endblock %}
+
+{% block scripts %} 
+
+{% endblock %}
