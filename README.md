@@ -2,6 +2,8 @@
 
 Primary goal of `django-accelerator-digidrey` is to skip the boilerplate setup, jump right into development, and concentrate on building core features and functionalities.
 
+![Preview](docs/screen-shot.png)
+
 ## Key Features
 
 - **Mobile-First User Interface:** Pre-configured responsive and visually appealing mobile-friendly User Interface.
@@ -11,7 +13,6 @@ Primary goal of `django-accelerator-digidrey` is to skip the boilerplate setup, 
 - **About Me & Disclaimer Page:** Pre-configured `about us` page template, easy to personalized. 
 
 - **Contact Us Page:** Pre-configured `contact us` page, backed by database for visitor to leave feedback, inquiries, or questions. 
-
 
 
 ## Get Started
