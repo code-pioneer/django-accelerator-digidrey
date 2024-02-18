@@ -52,4 +52,4 @@ python manage.py createsuperuser
 python3 manage.py runserver
 ```
 
-After database switch, you will have to reconfigure social login. Just go to admin view and follow "One last step" section of "Finishing Touch".
+After database switch, you will have to reconfigure social login. Just go to admin view and follow "Configure Django Administration" section of "Setup OAuth".

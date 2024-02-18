@@ -1,33 +1,27 @@
-## Create Primary App (i.e. Home)
-The goal for this app is to serve default homepage and other standard functions like
-- Homepage
-- Contact Us (with ability for visitor to leave feedback)
-- About Us
-- Disclaimer
+## Setup OAuth
 
-#### Create 'home' app and verify
+#### Create Credentials
 
-```
-python3 manage.py startapp home 
-python manage.py migrate
-python manage.py createsuperuser
-python3 manage.py runserver
-```
+1. Login to your Google account.
+2. Visit [https://console.cloud.google.com/apis/dashboard](https://console.cloud.google.com/apis/dashboard)
+3. From sidebar menu, select `Credentials` (key icon)
+4. Click on `+ CREATE CREDENTIALS` and select `OAuth Client ID`
+5. Application type: Web application
+6. Name: Give a meaningful name
+7. Authorized redirect URIs: Click on `+ ADD URI` and set `http://localhost:8000/accounts/google/login/callback/`. Add another entry `http://127.0.0.1:8000/accounts/google/login/callback/`. 
+7. Leave everything default during development and select Create.
+8. Record `Client ID` and `Secret Key`.
 
-Webserver should be running without any problem (verify [http://localhost:8000/](http://localhost:8000/)). Result should be same as before.
+#### Configure Django Administration
 
-
-#### Summary
-
-
-You should have working django application with following folder structure.
-```
- + my_project
-   + home (dir)
-   + main (dir)
-   + venv (dir)
-   - db.sqlite3 (file)
-   - manage.py (file)
-   - requirements.txt (file)
-
-```
+1. Login using your admin crudential (established during setup process)
+2. Click on `Social applications` under SOCIAL ACCOUNTS section
+3. On the right-top corner, click on `ADD SOCIAL APPLICATION +` button.
+4. Provider: Select `Google` from 'Provider' dropdown
+5. Provider ID: Give a name (preferably same name that you created in Google OAuth Configuration)
+6. Name: Keep same as provier id 
+7. Client id: Set the value you obtain from OAuth Configuration
+8. Secret key: Set the value you obtain from OAuth Configuration
+9. Key & Settings: Keep default values provided
+10. Sites: Add available sites
+11. Click on Save. Settings should picked up immediately. 

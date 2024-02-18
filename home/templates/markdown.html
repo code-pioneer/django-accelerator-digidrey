@@ -8,9 +8,17 @@
     border: 1px solid #f3f3f3;
     margin: 1.25rem 0.0rem;
     padding: 0.85rem !important;
-    color: #666;
-    background-color: #fbfbfb;
+    color: #333;
+    background-color: #eeeeee;
     border-radius: 7px;
+  }
+  code {
+    font-size: 0.8125rem;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #eeeeee;
+    padding: 3px !important;
+    border-radius: 5px;
   }
 
   .nav-item .nav-link {
@@ -28,14 +36,14 @@
                     <a href="{% url 'documentation' 'step1.md' %}" class="nav-link {% if doc_name == 'step1.md' %} active {% endif %}"> Getting Started</a>
                   </li>
                   <li class="nav-item">
-                    <a href="{% url 'documentation' 'step2.md' %}" class="nav-link {% if doc_name == 'step2.md' %} active {% endif %}"> Setup App </a>
+                    <a href="{% url 'documentation' 'step2.md' %}" class="nav-link {% if doc_name == 'step2.md' %} active {% endif %}"> Setup OAuth </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{% url 'documentation' 'step3.md' %}" class="nav-link {% if doc_name == 'step3.md' %} active {% endif %}"> Setup Theme & Auth </a>
+                    <a href="{% url 'documentation' 'step3.md' %}" class="nav-link {% if doc_name == 'step3.md' %} active {% endif %}"> Personalize App </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a href="{% url 'documentation' 'step4.md' %}" class="nav-link {% if doc_name == 'step4.md' %} active {% endif %}"> Finishing Touch </a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <a href="{% url 'documentation' 'step5.md' %}" class="nav-link {% if doc_name == 'step5.md' %} active {% endif %}"> Setup Postgresql (optional) </a>
                   </li>

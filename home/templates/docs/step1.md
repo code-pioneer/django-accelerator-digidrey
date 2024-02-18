@@ -1,39 +1,55 @@
-## Getting Started
+# django-accelerator-digidrey
 
-#### Create directory for your project
+Primary goal of `django-accelerator-digidrey` is to skip the boilerplate setup, jump right into development, and concentrate on building core features and functionalities.
+
+## Key Features
+
+- **Mobile-First User Interface:** Pre-configured responsive and visually appealing mobile-friendly User Interface.
+
+- **Google OAuth-Based Social Login:** Pre-configured Django allauth social package to utitilize Google OAuth-based social login, allowing users to effortlessly sign in using their existing Google accounts.
+
+- **About Me & Disclaimer Page:** Pre-configured `about us` and `disclaimer` page templates, easy to personalized. 
+
+- **Contact Us Page:** Pre-configured `contact us` page, backed by database for visitor to leave feedback, inquiries, or questions. 
+
+
+## Get Started
+1. Create project
+
 ```
-mkdir my_project
-cd my_project
+mkdir myproject
+cd myproject
+git clone https://github.com/vhpatel73/django-accelerator-digidrey.git .
 ```
 
-#### Create python virtual environment and install Django
+2. Create Virtual Environment
 ```
-python3 -m venv venv
+python -m venv venv
 source venv/bin/activate
+```
+
+3. Install packages
+```
 pip install --upgrade pip
-python3 -m pip install Django
-python3 -m django --version
-pip freeze > requirements.txt
+pip install -r requirements.txt
 ```
 
-#### Create a project and verify
-
-Project name: main
+4. Setup database
 ```
-django-admin startproject main .
-python3 manage.py runserver
+python manage.py migrate
 ```
-Webserver should be running without any problem (verify [http://localhost:8000/](http://localhost:8000/))
 
-#### Summary
-
-You should have working django application with following folder structure.
+5. Setup admin account
 ```
- + my_project
-   + main (dir)
-   + venv (dir)
-   - db.sqlite3 (file)
-   - manage.py (file)
-   - requirements.txt (file)
+python manage.py createsuperuser
+```
 
+6. Unit Test 
+```
+python ./manage.py test
+```
+
+7. Start server
+```
+python manage.py runserver --insecure
 ```

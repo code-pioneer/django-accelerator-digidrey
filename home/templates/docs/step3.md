@@ -1,95 +1,29 @@
-## Add "style" and "authentication"
+## Personalize App
 
-The goal for this step is to add default theme (look & feel), layout and authentication. This reference implementation use "google" as a identity provider. It is also assumed that you have setup Google oAuth and retrieve 'secret key' and 'client id' information.
+You should consider following changes to make Django Accelerator your own.
 
-#### Install necessary packages 
+- **Personalize logo :** Simply switch `favicon.ico`, `favicon.png`, `logo-blue.png`, `logo-white.png`, and `logo.png`. These files are located [here](/home/static/assets/img/)
 
-In requirements.txt file, add following
+- **Personalize `About Us` page :** Open [aboutus.html](/home/templates/common/aboutus.html), and edit content.
+
+- **Personalize `Disclaimer` page :** Open [disclaimer.html](/home/templates/common/disclaimer.html), and edit content.
+
+- **Personalize `404` and `500` pages :** Pages are located here [404](/home/templates/404.html) and [500](/home/templates/500.html)
+
+- **Personalize `Login` page :** Login page is located @ [Login](/templates/account/login.html)
+
+- **Personalize `Home` page :** Page is locaed @ [Home](/home/templates/index.html). 
+
+For example, open `index.html` and add following.
 ```
-django-allauth==0.60.0
-django-markdownx==4.0.7
-```
+{% extends "common/base_sidebar.html" %}
+{% load static %} 
+{% block page_content %}
 
-Install the packages
-```
-pip3 install -r requirements.txt 
-```
+    <h1> My Amazing Home Page</h1>
 
-#### Configure SETTINGS.py
-
-1. Modify following configuration in `main/settings.py`
-
-```
-ALLOWED_HOSTS = ['*']
-
-INSTALLED_APPS = [
-    ... ...
-
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'home',
-]
-
-MIDDLEWARE = [
-    ... ...
-
-    'allauth.account.middleware.AccountMiddleware',
-]
-
-TEMPLATES = [
-    {
-        ... ...
-
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),'/templates'],
-        
-        ... ...
-    },
-]
-
-TIME_ZONE = 'America/New_York'
-
-STATIC_URL = '/static/'
+{% endblock %}
 
 ```
 
-2. Add following entries
-
-```
-# Add at the begining of the file
-import os
-
-# Add following settings at the bottom of the file
-
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
-
-SITE_ID = 1
-
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-
-LOGIN_REDIRECT_URL = '/'
-
-SOCIALACCOUNT_LOGIN_ON_GET = True
-ACCOUNT_LOGOUT_ON_GET = False
-SITE_ID = 1
-
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE': [
-            'profile',
-            'email'
-        ], 
-        'AUTH_PARAMS': {
-            'access_type':'offline',
-        }
-    }
-}
-
-```
-
-Now move to next step
+**Save and refresh home page.**
