@@ -60,7 +60,7 @@ def contactus_post(request):
 # Display markdown documentation 
 
 default_md = "step1.md"
-menu_key = "Getting Started"
+menu_key = "Get Started"
 query_param = "doc_name"
 makdown_template = "markdown.html"
 template_context = "markdown"

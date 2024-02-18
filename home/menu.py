@@ -18,8 +18,8 @@ menuitems = [
                     "tags":[]
                 },  
                 {   "uri":"/docs/",
-                    "menu":"Getting Started",
-                    "header":"Getting Started",
+                    "menu":"Get Started",
+                    "header":"Get Started",
                     "subheader":"Django Accelerator",
                     "desc":"Short description of Documentation",
                     "pub":"Active since 8/2/2023",

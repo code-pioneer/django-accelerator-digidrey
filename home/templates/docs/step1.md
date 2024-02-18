@@ -1,8 +1,10 @@
-# django-accelerator-digidrey
+## Overview
 
 Primary goal of `django-accelerator-digidrey` is to skip the boilerplate setup, jump right into development, and concentrate on building core features and functionalities.
 
-## Key Features
+If you are looking at this from your working app, you have perform this step. Go to the second step - **Setup OAuth**.
+
+#### Key Features
 
 - **Mobile-First User Interface:** Pre-configured responsive and visually appealing mobile-friendly User Interface.
 
@@ -13,8 +15,9 @@ Primary goal of `django-accelerator-digidrey` is to skip the boilerplate setup, 
 - **Contact Us Page:** Pre-configured `contact us` page, backed by database for visitor to leave feedback, inquiries, or questions. 
 
 
-## Get Started
-1. Create project
+#### Get Started
+
+* Create project
 
 ```
 mkdir myproject
@@ -22,34 +25,34 @@ cd myproject
 git clone https://github.com/vhpatel73/django-accelerator-digidrey.git .
 ```
 
-2. Create Virtual Environment
+* Create Virtual Environment
 ```
 python -m venv venv
 source venv/bin/activate
 ```
 
-3. Install packages
+* Install packages
 ```
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-4. Setup database
+* Setup database
 ```
 python manage.py migrate
 ```
 
-5. Setup admin account
+* Setup admin account
 ```
 python manage.py createsuperuser
 ```
 
-6. Unit Test 
+* Run Unit Testcase 
 ```
 python ./manage.py test
 ```
 
-7. Start server
+* Start server
 ```
 python manage.py runserver --insecure
 ```
