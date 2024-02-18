@@ -3,14 +3,15 @@
 {% block head_content %}
 <style>
     .nav-item.active {
-        background-color: rgb(246, 249, 251) !important;
+        background-color: #fff !important;
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
+        font-weight: 600;
     }
 </style>
 {% endblock %}
 {% block page_content %}
-<ul class="nav mx-3">
+<ul class="nav">
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
@@ -23,15 +24,13 @@
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
 </ul>
-<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
-
-        <br/>
+<hr class="m-0" style="border: 0px solid #d2dae4;"/>
         <!-- page body -->
-        <div class="row px-4 pt-2">
+        <div class="row">
             <div class="col">
 
               <section id="breadcrumb-page">
-                <div class="card mt-4">
+                <div class="card">
                   <div class="card-header h4">Breadcrumb</div>
                   <div class="card-body">
                     <nav aria-label="breadcrumb">

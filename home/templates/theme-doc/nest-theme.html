@@ -3,15 +3,16 @@
 {% block head_content %}
 <style>
     .nav-item.active {
-        background-color: rgb(246, 249, 251) !important;
+        background-color: #fff !important;
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
+        font-weight: 600;
     }
 </style>
 {% endblock %}
 
 {% block page_content %}
-<ul class="nav mx-3">
+<ul class="nav">
   <li class="nav-item active"><a class="nav-link text-primary" href="{% url 'theme' %}">Home</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
@@ -24,13 +25,11 @@
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
 </ul>
-<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
-
-        <br/>
+<hr class="m-0" style="border: 0px solid #d2dae4;"/>
         <!-- page body -->
-        <div class="row mx-3">
+        <div class="row">
           <div class="col-md-12 col-lg-8">
-            <div class="card mb-4">
+            <div class="card mb-4" style="border-top-left-radius: 0px; margin-top: -2px;">
               <div class="card-header h4">
                   Illustrations
               </div>

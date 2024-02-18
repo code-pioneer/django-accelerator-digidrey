@@ -3,14 +3,15 @@
 {% block head_content %}
 <style>
     .nav-item.active {
-        background-color: rgb(246, 249, 251) !important;
+        background-color: #fff !important;
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
+        font-weight: 600;
     }
 </style>
 {% endblock %}
 {% block page_content %}
-<ul class="nav mx-3">
+<ul class="nav">
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' %}">Home</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'alert' %}">Alert</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'badge' %}">Badge</a></li>
@@ -23,23 +24,20 @@
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'table' %}">Table</a></li>
   <li class="nav-item"><a class="nav-link text-muted" href="{% url 'theme' 'typography' %}">Typography</a></li>
 </ul>
-<hr class="mx-3 mt-0" style="border: 1px solid #d2dae4;"/>
-
-        <br/>
+<hr class="m-0" style="border: 0px solid #d2dae4;"/>
         <!-- page body -->
-        <div class="row px-4 pt-2">
+        <div class="row">
             <div class="col">
-
-              <section id="icons-page">
-                
-                <span class="h4">For detail refer official Bootstrap documentation</span> - 
-                <a href="https://icons.getbootstrap.com/" class="btn-link h4 text-primary" target="_blank">Bootstrap Icons <i class="bi bi-bootstrap-fill"></i> </a>
-                
-                <div class="card mt-4">
+              <section id="icons-page">                
+                <div class="card">
                   <div class="card-body">
+                    <p class="text-center">
+                        <span class="h4">For detail refer official Bootstrap documentation</span> - 
+                        <a href="https://icons.getbootstrap.com/" class="btn-link h4 text-primary" target="_blank">Bootstrap Icons <i class="bi bi-bootstrap-fill"></i> </a>
+                    </p>
+                    <hr/>
                       <div class=""> 
-                          
-                      <div class="row">
+                      <div class="row pt-3">
                           <div class="col-1">
                               <div title="bi-alarm-fill" " class="p-2 align-items-center text-center"  data-toggle="tooltip" data-placement="bottom">
                                   <i class="bi-alarm-fill h2"></i>
