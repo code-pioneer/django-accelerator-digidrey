@@ -46,7 +46,12 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-6. Start server
+6. Run Unit Tesecase
+```
+python manage.py test
+```
+
+7. Start server
 ```
 python manage.py runserver --insecure
 ```
