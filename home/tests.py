@@ -28,14 +28,14 @@ class GettingStarted_View_TestCase(TestCase):
     def test_view1(self):
         response = self.client.post("/docs/", {})
         self.assertContains(response, "taralnest.com &copy; 2019")
-        self.assertContains(response, "Getting Started")
+        self.assertContains(response, "Get Started")
         self.assertContains(response, "step1.md")
         self.assertNotContains(response, "Theme Documentation")
 
     def test_view2(self):
         response = self.client.post("/docs/step6.md", {})
         self.assertContains(response, "taralnest.com &copy; 2019")
-        self.assertContains(response, "Getting Started")
+        self.assertContains(response, "Get Started")
         self.assertContains(response, "Deploy Django on GCP Cloud Run")
         self.assertNotContains(response, "Create POSTGRESQL database on local workstation")
 
