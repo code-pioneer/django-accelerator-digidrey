@@ -2,7 +2,7 @@
 
 Primary goal of `django-accelerator-digidrey` is to skip the boilerplate setup, jump right into development, and concentrate on building core features and functionalities.
 
-![Preview](docs/screen-shot.png)
+![Preview](docs/screen-home.png)
 
 ## Key Features
 
