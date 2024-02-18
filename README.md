@@ -10,7 +10,7 @@ Primary goal of `django-accelerator-digidrey` is to skip the boilerplate setup, 
 
 - **Google OAuth-Based Social Login:** Pre-configured Django allauth social package to utitilize Google OAuth-based social login, allowing users to effortlessly sign in using their existing Google accounts.
 
-- **About Me & Disclaimer Page:** Pre-configured `about us` page template, easy to personalized. 
+- **About Me & Disclaimer Page:** Pre-configured `about us` and `disclaimer` page templates, easy to personalized. 
 
 - **Contact Us Page:** Pre-configured `contact us` page, backed by database for visitor to leave feedback, inquiries, or questions. 
 
