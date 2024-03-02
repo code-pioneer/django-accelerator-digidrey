@@ -21,7 +21,7 @@ Primary goal of `django-accelerator-digidrey` is to skip the boilerplate setup, 
 ```
 mkdir myproject
 cd myproject
-git clone https://github.com/vhpatel73/django-accelerator-digidrey.git .
+git clone https://github.com/code-pioneer/django-accelerator-digidrey.git .
 ```
 
 2. Create Virtual Environment
